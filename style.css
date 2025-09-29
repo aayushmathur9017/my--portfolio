@@ -1,27 +1,146 @@
+/* General Styles */
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #005baa; /* Blue background puri site ke liye */
-  font-family: Arial, sans-serif;
-  color: white; /* text white rakhenge so it’s readable on blue */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f8;
+    color: #333;
 }
 
-.container {
-  text-align: center;
-  padding: 40px 20px;
+a {
+    text-decoration: none;
+    color: #0077b6;
+}
+
+a:hover {
+    color: #023e8a;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #023e8a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #0077b6, #023e8a);
+    color: white;
 }
 
 .profile-pic {
-  width: 150px;       /* photo chhoti karne ke liye */
-  height: 150px;
-  border-radius: 50%; /* round karne ke liye */
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto;
 }
-.name {
-  font-size: 22px;
-  font-weight: bold;
+
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
-.tagline {
-  font-size: 14px;
+
+#hero p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #023e8a;
+    border-bottom: 3px solid #0077b6;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* About Section */
+#about ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+#about h3 {
+    margin-top: 20px;
+    color: #0077b6;
+}
+
+/* Projects Section */
+.project {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+    color: #023e8a;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+#contact a {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #hero h1 {
+        font-size: 2em;
+    }
 }
